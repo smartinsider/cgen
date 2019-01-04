@@ -1,0 +1,26 @@
+[Unit]
+Description=CGen's distributed currency daemon
+After=network.target
+
+[Service]
+User=cgen
+Group=cgen
+
+Type=forking
+PIDFile=/var/lib/cgend/cgend.pid
+
+ExecStart=/usr/bin/cgend -daemon -pid=/var/lib/cgend/cgend.pid \
+          -conf=/etc/cgen/cgen.conf -datadir=/var/lib/cgend
+
+ExecStop=-/usr/bin/cgen-cli -conf=/etc/cgen/cgen.conf \
+         -datadir=/var/lib/cgend stop
+
+Restart=always
+PrivateTmp=true
+TimeoutStopSec=60s
+TimeoutStartSec=2s
+StartLimitInterval=120s
+StartLimitBurst=5
+
+[Install]
+WantedBy=multi-user.target

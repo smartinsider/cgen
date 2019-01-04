@@ -1,0 +1,26 @@
+# /etc/conf.d/cgend: config file for /etc/init.d/cgend
+
+# Config file location
+#BITCOIND_CONFIGFILE="/etc/cgen/cgen.conf"
+
+# What directory to write pidfile to?  (created and owned by $BITCOIND_USER)
+#BITCOIND_PIDDIR="/var/run/cgend"
+
+# What filename to give the pidfile
+#BITCOIND_PIDFILE="${BITCOIND_PIDDIR}/cgend.pid"
+
+# Where to write cgend data (be mindful that the blockchain is large)
+#BITCOIND_DATADIR="/var/lib/cgend"
+
+# User and group to own cgend process
+#BITCOIND_USER="cgen"
+#BITCOIND_GROUP="cgen"
+
+# Path to cgend executable
+#BITCOIND_BIN="/usr/bin/cgend"
+
+# Nice value to run cgend under
+#BITCOIND_NICE=0
+
+# Additional options (avoid -conf and -datadir, use flags above)
+BITCOIND_OPTS=""

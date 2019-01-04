@@ -1,0 +1,11 @@
+[Desktop Entry]
+Encoding=UTF-8
+Name=CGen
+Comment=CGen P2P Cryptocurrency
+Exec=cgen-qt %u
+Terminal=false
+Type=Application
+Icon=cgen128
+MimeType=x-scheme-handler/cgen;
+Categories=Office;Finance;
+Name[ru]=cgen-qt.desktop.desktop
