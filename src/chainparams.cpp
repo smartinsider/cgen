@@ -318,7 +318,7 @@ public:
         vSeeds.clear();      //! Testnet mode doesn't have any DNS seeds.
 
         fRequireRPCPassword = false;
-        fMiningRequiresPeers = false;
+        fMiningRequiresPeers = true;
         fDefaultConsistencyChecks = true;
         fRequireStandard = false;
         fMineBlocksOnDemand = true;
