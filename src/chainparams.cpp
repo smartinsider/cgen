@@ -127,7 +127,7 @@ public:
         nStartMasternodePaymentsBlock = 151;
 
         /** Height or Time Based Activations **/
-        nLastPOWBlock = 150;
+        nLastPOWBlock = 151;
         nModifierUpdateBlock = std::numeric_limits<decltype(nModifierUpdateBlock)>::max();
 
         const char* pszTimestamp = "First day of winter in Amsterdam. @SmartInsider 2018";
