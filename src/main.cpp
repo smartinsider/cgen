@@ -5422,7 +5422,7 @@ int ActiveProtocol()
 // requires LOCK(cs_vRecvMsg)
 bool ProcessMessages(CNode* pfrom)
 {
-    //if (fDebug)
+    if (fDebug)
         LogPrintf("ProcessMessages(%u messages)\n", pfrom->vRecvMsg.size());
 
     //

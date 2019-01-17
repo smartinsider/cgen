@@ -165,11 +165,13 @@ public:
         assert(hashGenesisBlock == uint256("000003fd613a42aff10f3a86be31f5351f3f165acf65e3122b1f8807ecabbda0"));
         assert(genesis.hashMerkleRoot == uint256("788d6dfb15c2ea38c945189a56c19a916135b93b523a79a80db910bbac87a97c"));
 
-
         vSeeds.push_back(CDNSSeedData("seed1.cgennode.com", "seed1.cgennode.com"));     // Primary DNS Seeder
         vSeeds.push_back(CDNSSeedData("seed2.cgennode.com", "seed2.cgennode.com"));     // Primary DNS Seeder
         vSeeds.push_back(CDNSSeedData("seed3.cgennode.com", "seed3.cgennode.com"));     // Primary DNS Seeder
-        vSeeds.push_back(CDNSSeedData("5.189.158.58", "5.189.158.58"));
+	vSeeds.push_back(CDNSSeedData("node1.zija.icu", "node1.zija.icu")); // Zija DNS Seeder
+	vSeeds.push_back(CDNSSeedData("node2.zija.icu", "node2.zija.icu")); // Zija DNS Seeder
+	vSeeds.push_back(CDNSSeedData("node3.zija.icu", "node3.zija.icu")); // Zija DNS Seeder
+	vSeeds.push_back(CDNSSeedData("node4.zija.icu", "node4.zija.icu")); // Zija DNS Seeder
 
         base58Prefixes[PUBKEY_ADDRESS] = std::vector<unsigned char>(1, 55); // P
         base58Prefixes[SCRIPT_ADDRESS] = std::vector<unsigned char>(1, 8);
