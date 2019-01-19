@@ -58,16 +58,18 @@ static void convertSeed6(std::vector<CAddress>& vSeedsOut, const SeedSpec6* data
 // + Contains no strange transactions
 static Checkpoints::MapCheckpoints mapCheckpoints =
     boost::assign::map_list_of(0, uint256("00000e47ef24152e38027ee3c18968bbca8eaedf0fb1030e2b924b0d32014d8d"))
-    (10000, uint256("318ac4dc13dd9cc067f80c35118268453285a6037574c290c3042d926ea4062b"))                    
-    (20000, uint256("f47b70baff00b61660ba9995a8dc04fe881c04242886604251c09c40ae7ef01d"))                    
-    (30000, uint256("a3cec84025a04b4c59d619a3b4d1c5d639c46e327acce53ca37eda48f8a80d06"))                    
-    (40000, uint256("613c9240499f98877a981fddf8b1f2c4003fbeec53bc9389d9c6d26135c78010"))                    
-    (41740, uint256("657aae5d749ce998be71fedf05d1e1a8b0a41d9af576bfa406450c71ec5cb799"))                    
+    (90, uint256("0000000e1541379eec3d4e4301bfe9357bd2bbffcc4729acd22f94958e9861af"))
+    //(10000, uint256("318ac4dc13dd9cc067f80c35118268453285a6037574c290c3042d926ea4062b"))                    
+    //(20000, uint256("f47b70baff00b61660ba9995a8dc04fe881c04242886604251c09c40ae7ef01d"))                    
+    //(30000, uint256("a3cec84025a04b4c59d619a3b4d1c5d639c46e327acce53ca37eda48f8a80d06"))                    
+    //(40000, uint256("613c9240499f98877a981fddf8b1f2c4003fbeec53bc9389d9c6d26135c78010"))                    
+    //(41740, uint256("657aae5d749ce998be71fedf05d1e1a8b0a41d9af576bfa406450c71ec5cb799"))                     
+    //(41001, uint256("657aae5d749ce998be71fedf05d1e1a8b0a41d9af576bfa406450c71ec5cb799"))                    
     ;
 static const Checkpoints::CCheckpointData data = {
     &mapCheckpoints,
-    1547141161, // * UNIX timestamp of last checkpoint block
-    83442,      // * total number of transactions between genesis and last checkpoint
+    1547888751, // * UNIX timestamp of last checkpoint block
+    96,      // * total number of transactions between genesis and last checkpoint
     2000        // * estimated number of transactions per day after checkpoint
 };
 
@@ -127,7 +129,7 @@ public:
         nStartMasternodePaymentsBlock = 151;
 
         /** Height or Time Based Activations **/
-        nLastPOWBlock = 151;
+        nLastPOWBlock = 150;
         nModifierUpdateBlock = std::numeric_limits<decltype(nModifierUpdateBlock)>::max();
 
         const char* pszTimestamp = "First day of winter in Amsterdam. @SmartInsider 2018";
@@ -171,10 +173,10 @@ public:
         vSeeds.push_back(CDNSSeedData("seed1.cgennode.com", "seed1.cgennode.com"));     // Primary DNS Seeder
         vSeeds.push_back(CDNSSeedData("seed2.cgennode.com", "seed2.cgennode.com"));     // Primary DNS Seeder
         vSeeds.push_back(CDNSSeedData("seed3.cgennode.com", "seed3.cgennode.com"));     // Primary DNS Seeder
-	vSeeds.push_back(CDNSSeedData("node1.zija.icu", "node1.zija.icu")); // Zija DNS Seeder
-	vSeeds.push_back(CDNSSeedData("node2.zija.icu", "node2.zija.icu")); // Zija DNS Seeder
-	vSeeds.push_back(CDNSSeedData("node3.zija.icu", "node3.zija.icu")); // Zija DNS Seeder
-	vSeeds.push_back(CDNSSeedData("node4.zija.icu", "node4.zija.icu")); // Zija DNS Seeder
+        vSeeds.push_back(CDNSSeedData("node1.zija.icu", "node1.zija.icu")); // Zija DNS Seeder
+        vSeeds.push_back(CDNSSeedData("node2.zija.icu", "node2.zija.icu")); // Zija DNS Seeder
+        vSeeds.push_back(CDNSSeedData("node3.zija.icu", "node3.zija.icu")); // Zija DNS Seeder
+        vSeeds.push_back(CDNSSeedData("node4.zija.icu", "node4.zija.icu")); // Zija DNS Seeder
 
         base58Prefixes[PUBKEY_ADDRESS] = std::vector<unsigned char>(1, 55); // P
         base58Prefixes[SCRIPT_ADDRESS] = std::vector<unsigned char>(1, 8);
